@@ -1,8 +1,26 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+
+<?import javafx.scene.control.TextField?>
+<GridPane alignment="center" gridLinesVisible="true" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9" fx:controller="Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="39.0" minHeight="21.0" prefHeight="21.0" />
+      <RowConstraints maxHeight="21.0" minHeight="3.0" prefHeight="21.0" />
+   </rowConstraints>
+   <children>
+      <Button mnemonicParsing="false" text="Send" GridPane.columnIndex="1" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Received" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField />
+   </children>
 </GridPane>
