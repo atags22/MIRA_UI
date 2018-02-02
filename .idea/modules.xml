@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MIRA_UI.iml" filepath="$PROJECT_DIR$/MIRA_UI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hid4java/hid4java.iml" filepath="$PROJECT_DIR$/hid4java/hid4java.iml" />
     </modules>
   </component>
 </project>
