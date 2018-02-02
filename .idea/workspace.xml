@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83c06f00-262d-4b9d-9449-763b21b7a843" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/MIRA_UI.iml" afterPath="$PROJECT_DIR$/MIRA_UI.iml" />
-      <change beforePath="$PROJECT_DIR$/out/production/MIRA_UI/sample.fxml" afterPath="$PROJECT_DIR$/out/production/MIRA_UI/sample.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-    </list>
+    <list default="true" id="83c06f00-262d-4b9d-9449-763b21b7a843" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/hid4java/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -358,12 +351,12 @@
       <workItem from="1517279761282" duration="2701000" />
       <workItem from="1517426843289" duration="4381000" />
       <workItem from="1517516622486" duration="2080000" />
-      <workItem from="1517533524066" duration="903000" />
+      <workItem from="1517533524066" duration="1468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11780000" />
+    <option name="totallyTimeSpent" value="12345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="749" extended-state="0" />
