@@ -16,6 +16,7 @@ public class usbHidTest implements HidServicesListener{
         for (HidDevice hidDevice : hidServices.getAttachedHidDevices()) {
             System.out.println(hidDevice);
             byte[] inData = null;
+            System.out.println("About to wait...");
             while(!hidDevice.open()){
 
             }
