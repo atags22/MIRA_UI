@@ -106,6 +106,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
     usbHidTest myTest = new usbHidTest();
+
     launch(args);
     }
 }
