@@ -21,6 +21,7 @@ public class MainController {
 //    }
 
     public AnchorPane getAnchorViz() {
+
         return anchorViz;
     }
 }

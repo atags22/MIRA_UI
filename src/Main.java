@@ -63,7 +63,7 @@ public class Main extends Application {
 //        AnchorPane anchorViz = (AnchorPane)(viz.getContent());
 
 
-        mainController.getAnchorViz().getChildren().add(cameraXform);
+        mainController.getAnchorViz().getChildren().addAll(cameraXform);
         cameraXform.getChildren().add(cameraXform2);
         cameraXform2.getChildren().add(cameraXform3);
         cameraXform3.getChildren().add(camera);
