@@ -12,20 +12,27 @@ public class usbHidTest implements HidServicesListener{
         hidServices = HidManager.getHidServices();
         hidServices.addHidServicesListener(this);
 
-// Provide a list of attached devices
+        // Provide a list of attached devices
         for (HidDevice hidDevice : hidServices.getAttachedHidDevices()) {
             System.out.println(hidDevice);
+            System.out.println(hidDevice.getId());
             byte[] inData = null;
-            System.out.println("About to wait...");
-            while(!hidDevice.open()){
-
+            if(hidDevice.getId().equals("0001:0008:00")) {
+                System.out.println("Correct device selected");
+                String deviceID = hidDevice.getId();
+                hidDevice.close();
+                System.out.println(hidDevice.open());
+                while (!hidDevice.isOpen()) {
+                    //System.out.println("Not Open");
+                }
+                System.out.println("Waiting 10 seconds...");
+                hidDevice.read(inData, 10000);
+                System.out.println(inData);
             }
-            System.out.println("Waiting 10 seconds...");
-            hidDevice.read(inData, 10000);
-            System.out.println(inData);
-
         }
     }
+
+
 
 
     @Override
