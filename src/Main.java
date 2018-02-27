@@ -46,6 +46,7 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World");
         Pane p = fxmlLoader.load(getClass().getResource("View/mainView.fxml").openStream());
         mainController = fxmlLoader.getController();
+        mainController.initialize();
 
 
         //buildCamera();
@@ -105,9 +106,9 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-    usbHidTest myTest = new usbHidTest();
-
-    //launch(args);
+    //usbHidTest myTest = new usbHidTest();
+    System.out.println("started");
+    launch(args);
     }
 }
 
