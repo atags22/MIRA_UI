@@ -1,5 +1,6 @@
 package Controller;
 
+import com.jfoenix.controls.JFXPopup;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -89,5 +90,11 @@ public class MainController {
         jointVal6.setText(String.format("%.2f",newValue*MagicNumbers.HUNDRED_TO_360));
     }
 
+
+    public void toggleMenu(){
+        JFXPopup p = new JFXPopup();
+
+    }
 }
+
 

@@ -16,11 +16,16 @@ public class Joint {
     //TODO: Make Joint Type class/enum
     double setPoint;
     boolean jointEnabled; //Should the motor ever try to turn?
+
     HashMap<String,Double> dhParams; //d, theta, r, alpha
     HashMap<String,Double> pidConstants; //kp, ki, kd
 
     public Joint(int canAddr){
         this.CAN_ID = canAddr;
+        this.jointEnabled = true;
+    }
+    public Joint(){
+        this.jointEnabled = false;
     }
     public void init(){
 
@@ -30,4 +35,11 @@ public class Joint {
         this.setPoint = newPoint;
     }
     public double getSetpoint(){ return this.setPoint; }
+
+    public void setActive() {
+        jointEnabled = true;
+    }
+    public void setDisabled(){
+        jointEnabled = false;
+    }
 }

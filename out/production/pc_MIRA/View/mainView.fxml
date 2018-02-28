@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToggleButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -72,16 +73,31 @@
                               </AnchorPane>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                  <children>
-                                    <Label layoutX="19.0" layoutY="23.0" text="Joint Type" />
+                                    <Label layoutX="19.0" layoutY="23.0" text="Enabled" />
                                  </children></AnchorPane>
-                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <JFXToggleButton layoutX="4.0" layoutY="13.0" />
+                                 </children></AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <JFXToggleButton layoutX="2.0" layoutY="13.0" />
+                                 </children></AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <JFXToggleButton layoutX="2.0" layoutY="13.0" />
+                                 </children></AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <children>
+                                    <JFXToggleButton layoutX="2.0" layoutY="12.0" />
+                                 </children></AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <children>
+                                    <JFXToggleButton layoutX="2.0" layoutY="12.0" />
+                                 </children></AnchorPane>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                                  <children>
-                                    <Label layoutX="46.0" layoutY="23.0" text="d" />
+                                    <Label layoutX="46.0" layoutY="23.0" text="Setpoint" />
                                  </children></AnchorPane>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
@@ -90,7 +106,7 @@
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
                                  <children>
-                                    <Label layoutX="33.0" layoutY="23.0" text="theta" />
+                                    <Label layoutX="33.0" layoutY="23.0" />
                                  </children></AnchorPane>
                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
@@ -100,7 +116,7 @@
 
                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4">
                                  <children>
-                                    <Label layoutX="47.0" layoutY="23.0" text="r" />
+                                    <Label layoutX="47.0" layoutY="23.0" />
                                  </children></AnchorPane>
                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
@@ -158,8 +174,11 @@
                                                    </padding>
                                                 </Label>
                                              </children>
+                                             <VBox.margin>
+                                                <Insets top="35.0" />
+                                             </VBox.margin>
                                           </HBox>
-                                          <Slider fx:id="jointCtrl1" />
+                                          <JFXSlider fx:id="jointCtrl1" />
                                           <HBox>
                                              <children>
                                                 <Label fx:id="jointLbl2" text="Joint 2">
@@ -174,8 +193,11 @@
                                                    </padding>
                                                 </Label>
                                              </children>
+                                             <VBox.margin>
+                                                <Insets top="35.0" />
+                                             </VBox.margin>
                                           </HBox>
-                                          <Slider fx:id="jointCtrl2" />
+                                          <JFXSlider fx:id="jointCtrl2" />
                                           <HBox>
                                              <children>
                                                 <Label fx:id="jointLbl3" text="Joint 3">
@@ -190,8 +212,11 @@
                                                    </padding>
                                                 </Label>
                                              </children>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
                                           </HBox>
-                                          <Slider fx:id="jointCtrl3" />
+                                          <JFXSlider fx:id="jointCtrl3" />
                                        </children>
                                     </VBox>
                                     <VBox prefHeight="204.0" HBox.hgrow="ALWAYS">
@@ -210,8 +235,11 @@
                                                    </padding>
                                                 </Label>
                                              </children>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
                                           </HBox>
-                                          <Slider fx:id="jointCtrl4" />
+                                          <JFXSlider fx:id="jointCtrl4" />
                                           <HBox>
                                              <children>
                                                 <Label fx:id="jointLbl5" text="Joint 5">
@@ -226,8 +254,11 @@
                                                    </padding>
                                                 </Label>
                                              </children>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
                                           </HBox>
-                                          <Slider fx:id="jointCtrl5" />
+                                          <JFXSlider fx:id="jointCtrl5" />
                                           <HBox>
                                              <children>
                                                 <Label fx:id="jointLbl6" text="Joint 6">
@@ -242,8 +273,11 @@
                                                    </padding>
                                                 </Label>
                                              </children>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
                                           </HBox>
-                                          <Slider fx:id="jointCtrl6" />
+                                          <JFXSlider fx:id="jointCtrl6" />
                                        </children>
                                     </VBox>
                                  </children>
