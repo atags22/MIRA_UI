@@ -22,7 +22,8 @@ hs_err_pid*
 
 
 #Intellij stuff
-.idea/**/workspace.xml
+
+.idea/
 *.iml
 *.iws
 
