@@ -11,12 +11,13 @@ public class RobotArm {
     public RobotArm(){
         kinematicChain = new ArrayList<Joint>();
         for(int i = 1; i <=6; i++){
-            Joint j = new Joint();
+            Joint j = new Joint(i);
             kinematicChain.add(j);
         }
     }
 
-    void updateActiveJoints(int numActive){
+    /*
+    public void updateActiveJoints(int numActive){
         for(int i = 0; i < kinematicChain.size(); i++){
             if(i+1 < numActive){
                 kinematicChain.get(i).setActive();
@@ -25,27 +26,36 @@ public class RobotArm {
                 kinematicChain.get(i).setDisabled();
             }
         }
-    }
+    }*/
 
     //TODO: Make CAN_ID class
-    void updateArmPosition(HashMap<Integer,Double> newAngles){
-        for(Joint j : kinematicChain){
-            //TODO: Should this be a try/catch in case we try to update with an invalid ID?
-            j.updateSetpoint(newAngles.get(j.CAN_ID));
+    public void updateArmPosition(ArrayList<Double> newAngles){
+        for(int i = 0; i < newAngles.size(); i++){
+            //TODO: Should this be a try/catch in case we try to update more joints than we have?
+            kinematicChain.get(i).updateSetpoint(newAngles.get(i));
         }
     }
 
-    void updateJointPosition(int jointNum, double newAngle){
+    public void updateJointPosition(int jointNum, double newAngle){
         //Hardcore java people would use stream or lambda function somehow
-
+        kinematicChain.get(jointNum-1).updateSetpoint(newAngle);
 
     }
 
-    HashMap<Integer,Double> getAngles(){
-        HashMap<Integer,Double> toReturn = new HashMap<>();
+    //Joint Num is always 1 indexed. Arrays are 0 indexed.
+    public ArrayList<Double> getAngles(){
+        ArrayList<Double> toReturn = new ArrayList<>();
         for(Joint j : this.kinematicChain){
-            toReturn.put(j.CAN_ID,j.setPoint);
+            toReturn.add(j.getSetpoint());
         }
         return toReturn;
+    }
+
+    public Double getAngle(int jointNum){
+        return kinematicChain.get(jointNum-1).getSetpoint();
+    }
+
+    public void associateCANaddr(int jointNum, int canID){
+        kinematicChain.get(jointNum-1).setCAN_ID(canID);
     }
 }

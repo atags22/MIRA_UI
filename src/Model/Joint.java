@@ -11,35 +11,49 @@ import java.util.HashMap;
  * -PID Constants
  */
 public class Joint {
+
+    int jointNum;
+
     //TODO: MAke this an instance of CAN_ID object
-    int CAN_ID;
+    private int CAN_ID;
     //TODO: Make Joint Type class/enum
-    double setPoint;
-    boolean jointEnabled; //Should the motor ever try to turn?
+    private double setPoint;
+    private boolean jointEnabled; //Should the motor ever try to turn?
 
-    HashMap<String,Double> dhParams; //d, theta, r, alpha
-    HashMap<String,Double> pidConstants; //kp, ki, kd
+    private HashMap<String,Double> dhParams; //d, theta, r, alpha
+    private HashMap<String,Double> pidConstants; //kp, ki, kd
 
-    public Joint(int canAddr){
-        this.CAN_ID = canAddr;
+    public Joint(int jointNum){
+        this.jointNum = jointNum;
         this.jointEnabled = true;
     }
-    public Joint(){
-        this.jointEnabled = false;
-    }
-    public void init(){
+
+/*    public void init(){
 
     }
+    */
+
     //TODO: Basic setters/getters
     public void updateSetpoint(double newPoint){
         this.setPoint = newPoint;
+        Comms.getInstance().sendJointUpdate(this.jointNum,newPoint);
     }
     public double getSetpoint(){ return this.setPoint; }
 
     public void setActive() {
         jointEnabled = true;
+        Comms.getInstance().sendEnableStatus(this.jointNum,true);
     }
     public void setDisabled(){
         jointEnabled = false;
+        Comms.getInstance().sendEnableStatus(this.jointNum,false);
+    }
+
+    public int getCAN_ID() {
+        return CAN_ID;
+    }
+    public void setCAN_ID(int CAN_ID) {
+        this.CAN_ID = CAN_ID;
+        Comms.getInstance().attachIDtoJoint(this.jointNum,CAN_ID);
     }
 }

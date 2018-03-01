@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.RobotArm;
 import com.jfoenix.controls.JFXPopup;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,33 +37,44 @@ public class MainController {
     @FXML Label jointVal4;
     @FXML Label jointVal5;
     @FXML Label jointVal6;
-//    public MainController() {
-//
-//    }
+
+
+    RobotArm robotArm;
 
     public void initialize(){
+
+        robotArm = new RobotArm();
+
+
+
         jointCtrl1.valueProperty().addListener((obs, oldValue, newValue) -> {
             slider1(newValue.doubleValue());
+            robotArm.updateJointPosition(1,newValue.doubleValue());
         });
 
         jointCtrl2.valueProperty().addListener((obs, oldValue, newValue) -> {
             slider2(newValue.doubleValue());
+            robotArm.updateJointPosition(2,newValue.doubleValue());
         });
 
         jointCtrl3.valueProperty().addListener((obs, oldValue, newValue) -> {
             slider3(newValue.doubleValue());
+            robotArm.updateJointPosition(3,newValue.doubleValue());
         });
 
         jointCtrl4.valueProperty().addListener((obs, oldValue, newValue) -> {
             slider4(newValue.doubleValue());
+            robotArm.updateJointPosition(4,newValue.doubleValue());
         });
 
         jointCtrl5.valueProperty().addListener((obs, oldValue, newValue) -> {
             slider5(newValue.doubleValue());
+            robotArm.updateJointPosition(5,newValue.doubleValue());
         });
 
         jointCtrl6.valueProperty().addListener((obs, oldValue, newValue) -> {
             slider6(newValue.doubleValue());
+            robotArm.updateJointPosition(6,newValue.doubleValue());
         });
 
     }
@@ -72,7 +84,7 @@ public class MainController {
     }
 
     public void slider1(double newValue){
-        jointVal1.setText(String.format("%.2f",newValue* MagicNumbers.HUNDRED_TO_360));
+        jointVal1.setText(String.format("%.2f",newValue*MagicNumbers.HUNDRED_TO_360));
     }
     public void slider2(double newValue){
         jointVal2.setText(String.format("%.2f",newValue*MagicNumbers.HUNDRED_TO_360));

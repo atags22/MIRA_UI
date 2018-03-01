@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.DropdownButton?>
+<!--<?import com.gluonhq.charm.glisten.control.DropdownButton?>-->
+
+<?import com.jfoenix.controls.JFXDialog?>
 <?import com.jfoenix.controls.JFXSlider?>
 <?import com.jfoenix.controls.JFXToggleButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -34,17 +36,18 @@
                                           <Insets left="20.0" top="10.0" />
                                        </HBox.margin>
                                     </Label>
-                                    <DropdownButton>
-                                        <items>
-                                            <MenuItem text="1" />
-                                            <MenuItem text="2" />
-                                            <MenuItem text="3" />
-                                          <MenuItem mnemonicParsing="false" text="4" />
-                                        </items>
-                                       <HBox.margin>
-                                          <Insets left="30.0" top="10.0" />
-                                       </HBox.margin>
-                                    </DropdownButton>
+                                    <ComboBox prefWidth="150.0" />
+                                    <!--<DropdownButton>-->
+                                        <!--<items>-->
+                                            <!--<MenuItem text="1" />-->
+                                            <!--<MenuItem text="2" />-->
+                                            <!--<MenuItem text="3" />-->
+                                          <!--<MenuItem mnemonicParsing="false" text="4" />-->
+                                        <!--</items>-->
+                                       <!--<HBox.margin>-->
+                                          <!--<Insets left="30.0" top="10.0" />-->
+                                       <!--</HBox.margin>-->
+                                    <!--</DropdownButton>-->
                                  </children>
                               </HBox>
                               <GridPane>
@@ -95,7 +98,7 @@
                                           <Label layoutX="25.0" layoutY="23.0" text="Joint 4" />
                                        </children>
                                     </AnchorPane>
-                                    <AnchorPane prefWidth="200.0" GridPane.columnIndex="1">
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                        <children>
                                           <Label layoutX="19.0" layoutY="23.0" text="Enabled" />
                                        </children>
@@ -141,11 +144,14 @@
                                        </children>
                                     </AnchorPane>
                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                     <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                     <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                       <children>
+                                          <JFXDialog layoutX="50.0" layoutY="26.0" />
+                                       </children></AnchorPane>
                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-      
+
                                            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4">
                                        <children>
                                           <Label layoutX="47.0" layoutY="23.0" />
@@ -156,7 +162,7 @@
                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-      
+
                                            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5">
                                        <children>
                                           <Label layoutX="32.0" layoutY="23.0" />
@@ -167,8 +173,8 @@
                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-      
-            
+
+
                                        </children>
                               </GridPane>
                            </children>
