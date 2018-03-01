@@ -2,6 +2,7 @@ package Controller;
 
 import Model.RobotArm;
 import com.jfoenix.controls.JFXPopup;
+import com.jfoenix.controls.JFXToggleButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -38,6 +39,8 @@ public class MainController {
     @FXML Label jointVal5;
     @FXML Label jointVal6;
 
+
+    @FXML JFXToggleButton button1;
 
     RobotArm robotArm;
 
@@ -101,6 +104,8 @@ public class MainController {
     public void slider6(double newValue){
         jointVal6.setText(String.format("%.2f",newValue*MagicNumbers.HUNDRED_TO_360));
     }
+
+
 
 
     public void toggleMenu(){
