@@ -1,4 +1,5 @@
 import Controller.MainController;
+import Model.Comms;
 import Model.RobotArm;
 import Model.Xform;
 import javafx.application.Application;
@@ -110,6 +111,7 @@ public class Main extends Application {
     //usbHidTest myTest = new usbHidTest();
     System.out.println("started");
     launch(args);
+
 
     }
 }
