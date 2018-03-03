@@ -41,7 +41,15 @@ public class Comms {
         //convert double to 12-bit int
         //int b = ins.read();
 //        int b = (int) ((newAngle / 360.) * 255.);
-        String toSend = Integer.toString((int) (newAngle * 8192 / 100.));
+        if ((47 < newAngle) && (newAngle < 53)) {
+            newAngle = 50;
+        }
+        System.out.print("In val = " + newAngle);
+        int sendInt = (int) (newAngle * 8192 / 100.);
+        if (sendInt < 1000) {
+            sendInt = 1000;
+        }
+        String toSend = Integer.toString(sendInt);
         System.out.println("Int Value: " + toSend);
         try {
             outs.write(toSend.getBytes());

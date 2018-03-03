@@ -288,7 +288,7 @@
                                                 </Label>
                                              </children>
                                              <VBox.margin>
-                                                <Insets top="20.0" />
+                                                <Insets top="35.0" />
                                              </VBox.margin>
                                           </HBox>
                                           <JFXSlider fx:id="jointCtrl3" />
@@ -311,7 +311,7 @@
                                                 </Label>
                                              </children>
                                              <VBox.margin>
-                                                <Insets top="20.0" />
+                                                <Insets top="35.0" />
                                              </VBox.margin>
                                           </HBox>
                                           <JFXSlider fx:id="jointCtrl4" />
@@ -330,7 +330,7 @@
                                                 </Label>
                                              </children>
                                              <VBox.margin>
-                                                <Insets top="20.0" />
+                                                <Insets top="35.0" />
                                              </VBox.margin>
                                           </HBox>
                                           <JFXSlider fx:id="jointCtrl5" />
@@ -349,7 +349,7 @@
                                                 </Label>
                                              </children>
                                              <VBox.margin>
-                                                <Insets top="20.0" />
+                                                <Insets top="35.0" />
                                              </VBox.margin>
                                           </HBox>
                                           <JFXSlider fx:id="jointCtrl6" />
