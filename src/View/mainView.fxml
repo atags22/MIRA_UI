@@ -106,27 +106,27 @@
                                     </AnchorPane>
                                     <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <children>
-                                          <JFXToggleButton layoutX="2.0" layoutY="7.0" />
+                                          <JFXToggleButton fx:id="button0" layoutX="2.0" layoutY="7.0" />
                                        </children>
                                     </AnchorPane>
                                     <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <children>
-                                          <JFXToggleButton layoutX="2.0" layoutY="13.0" />
+                                          <JFXToggleButton fx:id="button1" layoutX="2.0" layoutY="13.0" />
                                        </children>
                                     </AnchorPane>
                                     <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                        <children>
-                                          <JFXToggleButton layoutX="2.0" layoutY="13.0" />
+                                          <JFXToggleButton fx:id="button2" layoutX="2.0" layoutY="13.0" />
                                        </children>
                                     </AnchorPane>
                                     <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <children>
-                                          <JFXToggleButton layoutX="2.0" layoutY="12.0" />
+                                          <JFXToggleButton fx:id="button3" layoutX="2.0" layoutY="12.0" />
                                        </children>
                                     </AnchorPane>
                                     <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <children>
-                                          <JFXToggleButton layoutX="2.0" layoutY="12.0" />
+                                          <JFXToggleButton fx:id="button4" layoutX="2.0" layoutY="12.0" />
                                        </children>
                                     </AnchorPane>
                                     <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">

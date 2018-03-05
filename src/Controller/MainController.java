@@ -3,9 +3,12 @@ package Controller;
 import Model.RobotArm;
 import com.jfoenix.controls.JFXPopup;
 import com.jfoenix.controls.JFXToggleButton;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.SceneAntialiasing;
 import javafx.scene.SubScene;
@@ -17,6 +20,8 @@ import javafx.scene.shape.Box;
 import util.MagicNumbers;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class MainController {
 
@@ -40,14 +45,17 @@ public class MainController {
     @FXML Label jointVal6;
 
 
+    @FXML JFXToggleButton button0;
     @FXML JFXToggleButton button1;
+    @FXML JFXToggleButton button2;
+    @FXML JFXToggleButton button3;
+    @FXML JFXToggleButton button4;
 
     RobotArm robotArm;
 
     public void initialize(){
 
         robotArm = new RobotArm();
-
 
 
         jointCtrl1.valueProperty().addListener((obs, oldValue, newValue) -> {
@@ -78,6 +86,44 @@ public class MainController {
         jointCtrl6.valueProperty().addListener((obs, oldValue, newValue) -> {
             slider6(newValue.doubleValue());
             robotArm.updateJointPosition(6,newValue.doubleValue());
+        });
+
+
+        button0.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                System.out.println("Button is " + button0.isSelected());
+            }
+        });
+
+        button1.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                System.out.println("Button is " + button1.isSelected());
+            }
+        });
+
+        button2.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                System.out.println("Button is " + button2.isSelected());
+            }
+        });
+
+
+        button3.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                System.out.println("Button is " + button3.isSelected());
+            }
+        });
+
+
+        button4.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+                System.out.println("Button is " + button4.isSelected());
+            }
         });
 
     }
