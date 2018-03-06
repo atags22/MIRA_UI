@@ -40,13 +40,10 @@ public class Joint {
     }
     public double getSetpoint(){ return this.setPoint; }
 
-    public void setActive() {
-        jointEnabled = true;
-        Comms.getInstance().sendEnableStatus(this.jointNum,true);
-    }
-    public void setDisabled(){
-        jointEnabled = false;
-        Comms.getInstance().sendEnableStatus(this.jointNum,false);
+    public void setActiveStatus(boolean activeStatus) {
+        jointEnabled = activeStatus;
+//        Comms.getInstance().sendEnableStatus(this.jointNum,activeStatus);
+        System.out.println("Joint " + (jointNum) + " is " + activeStatus);
     }
 
     public int getCAN_ID() {

@@ -23,7 +23,11 @@ public class Comms {
         String port = "/dev/ttyACM0";
         int baudRate = 115200;
         NRSerialPort serial = new NRSerialPort(port, baudRate);
-        serial.connect();
+
+        //TODO: If statement is untested. Try with actual hardware.
+        if(!serial.isConnected()){
+            serial.connect();
+        }
 
         ins = new DataInputStream(serial.getInputStream());
         outs = new DataOutputStream(serial.getOutputStream());

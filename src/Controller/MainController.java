@@ -45,11 +45,11 @@ public class MainController {
     @FXML Label jointVal6;
 
 
-    @FXML JFXToggleButton button0;
     @FXML JFXToggleButton button1;
     @FXML JFXToggleButton button2;
     @FXML JFXToggleButton button3;
     @FXML JFXToggleButton button4;
+    @FXML JFXToggleButton button5;
 
     RobotArm robotArm;
 
@@ -89,32 +89,26 @@ public class MainController {
         });
 
 
-        button0.selectedProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                System.out.println("Button is " + button0.isSelected());
-            }
-        });
 
         button1.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                System.out.println("Button is " + button1.isSelected());
+//                System.out.println("Button is " + button1.isSelected());
+                robotArm.setActiveStatus(1,button1.isSelected());
             }
         });
-
         button2.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                System.out.println("Button is " + button2.isSelected());
+//                System.out.println("Button is " + button2.isSelected());
+                robotArm.setActiveStatus(2,button2.isSelected());
             }
         });
-
-
         button3.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                System.out.println("Button is " + button3.isSelected());
+//                System.out.println("Button is " + button3.isSelected());
+                robotArm.setActiveStatus(3,button3.isSelected());
             }
         });
 
@@ -122,10 +116,18 @@ public class MainController {
         button4.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                System.out.println("Button is " + button4.isSelected());
+//                System.out.println("Button is " + button4.isSelected());
+                robotArm.setActiveStatus(4,button4.isSelected());
             }
         });
 
+        button5.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
+//                System.out.println("Button is " + button0.isSelected());
+                robotArm.setActiveStatus(5,button5.isSelected());
+            }
+        });
     }
     public AnchorPane getAnchorViz() {
 

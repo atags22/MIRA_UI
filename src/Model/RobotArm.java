@@ -58,4 +58,8 @@ public class RobotArm {
     public void associateCANaddr(int jointNum, int canID){
         kinematicChain.get(jointNum-1).setCAN_ID(canID);
     }
+
+    public void setActiveStatus(int jointNum, boolean active){
+        kinematicChain.get(jointNum-1).setActiveStatus(active);
+    }
 }
