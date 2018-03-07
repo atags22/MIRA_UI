@@ -2,6 +2,8 @@ package Model;
 
 
 import gnu.io.NRSerialPort;
+import gnu.io.SerialPortEvent;
+import gnu.io.SerialPortEventListener;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -31,7 +33,18 @@ public class Comms {
 
         ins = new DataInputStream(serial.getInputStream());
         outs = new DataOutputStream(serial.getOutputStream());
+
+
+        serial.addEventListener(new SerialPortEventListener() {
+            @Override
+            public void serialEvent(SerialPortEvent serialPortEvent) {
+
+            }
+        });
+
+
     }
+
     private static Comms localInstance;
     public static Comms getInstance(){
         if (localInstance == null){
