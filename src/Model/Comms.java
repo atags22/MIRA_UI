@@ -38,7 +38,14 @@ public class Comms {
         serial.addEventListener(new SerialPortEventListener() {
             @Override
             public void serialEvent(SerialPortEvent serialPortEvent) {
-
+                if(serialPortEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
+                    try {
+                        //Print the number of bytes of the message
+                        System.out.println("Able to read " + ins.available() + " bytes.");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    });
+                }
             }
         });
 
