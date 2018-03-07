@@ -8,6 +8,7 @@ import gnu.io.SerialPortEventListener;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.util.TooManyListenersException;
 
 public class Comms {
 
@@ -35,19 +36,23 @@ public class Comms {
         outs = new DataOutputStream(serial.getOutputStream());
 
 
-        serial.addEventListener(new SerialPortEventListener() {
-            @Override
-            public void serialEvent(SerialPortEvent serialPortEvent) {
-                if(serialPortEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
-                    try {
-                        //Print the number of bytes of the message
-                        System.out.println("Able to read " + ins.available() + " bytes.");
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    });
+        try {
+            serial.addEventListener(new SerialPortEventListener() {
+                @Override
+                public void serialEvent(SerialPortEvent serialPortEvent) {
+                    if(serialPortEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
+                        try {
+                            //Print the number of bytes of the message
+                            System.out.println("Able to read " + ins.available() + "b");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
                 }
-            }
-        });
+            });
+        } catch (TooManyListenersException e) {
+            e.printStackTrace();
+        }
 
 
     }
