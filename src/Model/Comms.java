@@ -1,7 +1,7 @@
 package Model;
 
 
-import gnu.io.NRSerialPort;
+gradle import gnu.io.NRSerialPort;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
